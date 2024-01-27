@@ -75,7 +75,13 @@ def start(_type, _args) do
 end
 ```
 
-Next, disable the default Phoenix logger by adding the following line to your `config.exs` file:
+Next, add `Logster.Plug` to your `endpoint.ex`:
+
+```elixir
+plug Logster.Plug
+```
+
+Finally, disable the default Phoenix logger by adding the following line to your `config.exs` file:
 
 ```elixir
 config :phoenix, :logger, false
